@@ -1,10 +1,10 @@
-# Digit Recognizer
+# Handwriting Recognizer
 
-A simple Python module for recognizing handwritten digits using machine learning. Designed for easy integration and efficient preprocessing.
+A simple Python module for recognizing handwritten using machine learning. Designed for easy integration and efficient preprocessing.
 
 ## Features
 
-- Preprocess handwritten digit images
+- Preprocess handwritten images
 - Extract simple features for recognition
 - K-Nearest Neighbors (KNN) prediction
 - Async support for building templates
@@ -19,14 +19,14 @@ pip install .
 
 Or install from GitHub:
 
-pip install git+https://github.com/littlecommandcat/cat_digit_recognizer.git
+pip install git+https://github.com/littlecommandcat/handwriting_recognizer.git
 
 ## Quick Example
 ```py
-from cat_digit_recognizer import DigitLearning  
+from handwriting_recognizer import HandwritingRecognizer  
 import asyncio
 
-machine = DigitLearning(timeout=-1)
+machine = HandwritingRecognizer(timeout=-1)
 
 # Build templates from data
 asyncio.run(machine.build_all_templates("directory")) # Your data directory
@@ -37,7 +37,7 @@ machine.save_model("model.npz") # Save model file(.npz)
 # Load model
 machine.load_model("model.npz") # Load model file(.npz)
 
-# Predict a digit
+# Predict a picture
 result = asyncio.run(machine.predict("file.png")) # Use model to predict png/jpg/jpeg file
 print(result)
 ```
