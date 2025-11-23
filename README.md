@@ -13,6 +13,12 @@ A simple Python module for recognizing handwritten using machine learning. Desig
 
 ## Installation
 
+Install from PyPI:
+
+```bash
+pip install cat-handwriting-recognizer
+```
+
 Install from GitHub:
 
 ```bash
